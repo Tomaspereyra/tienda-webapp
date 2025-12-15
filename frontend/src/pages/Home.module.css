@@ -1,0 +1,103 @@
+.homePage {
+    min-height: 100vh;
+    background-color: var(--color-bg-primary);
+}
+
+.header {
+    background: var(--color-bg-secondary);
+    padding: var(--spacing-5) 0;
+    text-align: center;
+    margin-bottom: var(--spacing-5);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.headerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-3);
+}
+
+.headerImage {
+    width: 120px;
+    height: auto;
+    mix-blend-mode: multiply;
+    opacity: 0.85;
+}
+
+.headerText {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+}
+
+.headerTitle {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-regular);
+    margin-bottom: var(--spacing-1);
+    color: var(--color-primary);
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.headerSubtitle {
+    font-family: var(--font-family);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-light);
+    color: var(--color-secondary);
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+.content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-4);
+}
+
+.section {
+    margin-bottom: var(--spacing-6);
+}
+
+.sectionTitle {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-3);
+    text-align: center;
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.loading {
+    text-align: center;
+    padding: var(--spacing-6);
+    color: var(--color-secondary);
+    font-size: var(--font-size-md);
+}
+
+.error {
+    text-align: center;
+    padding: var(--spacing-4);
+    color: var(--color-error);
+    background-color: rgba(201, 112, 100, 0.08);
+    border-radius: 4px;
+    border: 1px solid rgba(201, 112, 100, 0.15);
+    margin: var(--spacing-3);
+}
+
+.emptyFiltersMessage {
+    text-align: center;
+    padding: var(--spacing-6);
+    color: var(--color-secondary);
+}
+
+.emptyFiltersMessage h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-2);
+    color: var(--color-primary);
+}
+
+.emptyFiltersMessage p {
+    font-size: var(--font-size-sm);
+    color: var(--color-secondary);
+}

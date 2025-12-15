@@ -1,0 +1,17 @@
+# Files to exclude from Docker builds
+
+# Backend
+backend/data/
+backend/uploads/
+backend/*.db
+backend/.env
+backend/.env.local
+backend/.env.production
+backend/webapp-tienda.exe
+backend/main
+
+# Frontend  
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.development

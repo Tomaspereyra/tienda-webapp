@@ -1,0 +1,67 @@
+/* TShirtColorSelector Styles */
+
+.selectorContainer {
+    width: 100%;
+}
+
+.title {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-primary);
+    margin: 0 0 var(--spacing-2);
+}
+
+.colorGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-2);
+}
+
+.colorButton {
+    position: relative;
+    padding: var(--spacing-2);
+    background: var(--color-bg-primary);
+    border: 2px solid var(--color-border-light);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.colorButton:hover {
+    border-color: var(--color-border);
+    transform: translateY(-2px);
+}
+
+.colorButton.selected {
+    border-color: var(--color-primary);
+    border-width: 3px;
+    background: var(--color-bg-secondary);
+}
+
+.colorSwatch {
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    box-shadow: var(--shadow-sm);
+}
+
+.colorName {
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--color-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+.checkmark {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-primary);
+}

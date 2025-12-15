@@ -1,0 +1,71 @@
+.navbar {
+    background: var(--color-primary);
+    color: white;
+    padding: var(--spacing-3) 0;
+    box-shadow: var(--shadow-md);
+}
+
+.navContent {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.brandIcon {
+    font-size: 24px;
+}
+
+.brandText {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: white;
+    margin: 0;
+}
+
+.navActions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+}
+
+.userInfo {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.logoutButton {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: var(--spacing-2) var(--spacing-3);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    transition: all 0.2s ease;
+}
+
+.logoutButton:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.homeLink {
+    color: white;
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+}
+
+.homeLink:hover {
+    opacity: 1;
+}

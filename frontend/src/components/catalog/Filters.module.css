@@ -1,0 +1,161 @@
+.filtersContainer {
+    background: var(--color-bg-primary);
+    padding: var(--spacing-3) 0;
+    margin-bottom: var(--spacing-4);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.filtersWrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-4);
+}
+
+.filtersTitle {
+    font-family: var(--font-family-accent);
+    font-size: 11px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-2);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wider);
+}
+
+.filtersRow {
+    display: flex;
+    gap: var(--spacing-2);
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: var(--spacing-2);
+}
+
+.filterSection {
+    display: flex;
+    gap: var(--spacing-1);
+    align-items: center;
+}
+
+.filterLabel {
+    font-family: var(--font-family-accent);
+    font-size: 11px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    margin-right: 8px;
+    letter-spacing: var(--letter-spacing-wider);
+}
+
+.filterButton {
+    font-family: var(--font-family-accent);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-regular);
+    padding: 8px 18px;
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+    background-color: var(--color-bg-primary);
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+.filterButton:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-bg-secondary);
+}
+
+.filterButton.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.divider {
+    width: 1px;
+    height: 20px;
+    background-color: var(--color-border);
+    margin: 0 var(--spacing-1);
+}
+
+.checkboxButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-family-accent);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-regular);
+    padding: 8px 18px;
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+    background-color: var(--color-bg-primary);
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+.checkboxButton:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-bg-secondary);
+}
+
+.checkboxButton.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.checkbox {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+}
+
+.actionsRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-2);
+}
+
+.resultsCount {
+    font-size: var(--font-size-xs);
+    color: var(--color-secondary);
+    font-weight: var(--font-weight-regular);
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+.clearButton {
+    font-family: var(--font-family-accent);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-secondary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    letter-spacing: var(--letter-spacing-wide);
+    transition: color var(--transition-base);
+}
+
+.clearButton:hover {
+    color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .filtersRow {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filterSection {
+        width: 100%;
+    }
+
+    .divider {
+        display: none;
+    }
+}

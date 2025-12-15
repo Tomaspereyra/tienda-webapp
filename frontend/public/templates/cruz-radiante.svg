@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect fill="#FFFEF7" width="800" height="1000"/>
+  <g transform="translate(400, 400)">
+    <rect x="-20" y="-150" width="40" height="300" fill="#B8860B" rx="5"/>
+    <rect x="-120" y="-20" width="240" height="40" fill="#B8860B" rx="5"/>
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#FFD700" stroke-width="4" opacity="0.6"/>
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#FFD700" stroke-width="3" opacity="0.4"/>
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#FFD700" stroke-width="2" opacity="0.2"/>
+  </g>
+  <text x="400" y="650" font-family="serif" font-size="32" fill="#333" text-anchor="middle" font-weight="300">CRUZ RADIANTE</text>
+  <text x="400" y="700" font-family="serif" font-size="20" fill="#666" text-anchor="middle">Luz Celestial</text>
+</svg>

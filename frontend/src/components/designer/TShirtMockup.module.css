@@ -1,0 +1,41 @@
+/* TShirtMockup Styles */
+
+.mockupContainer {
+    width: 100%;
+    padding: var(--spacing-3);
+}
+
+.title {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-primary);
+    margin: 0 0 var(--spacing-3);
+    text-align: center;
+}
+
+.canvasWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-bg-tertiary);
+    border-radius: 8px;
+    padding: var(--spacing-3);
+    margin-bottom: var(--spacing-2);
+}
+
+.canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.hint {
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--color-secondary);
+    text-align: center;
+    margin: 0;
+    font-style: italic;
+}

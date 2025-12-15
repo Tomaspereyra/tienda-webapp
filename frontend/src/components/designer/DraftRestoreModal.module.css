@@ -1,0 +1,83 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    color: var(--text-primary, #1a1a1a);
+}
+
+.message {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary, #666);
+    margin: 0 0 2rem 0;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.primaryButton {
+    background: var(--primary-color, #2563eb);
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.primaryButton:hover {
+    background: var(--primary-hover, #1d4ed8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.secondaryButton {
+    background: transparent;
+    color: var(--text-secondary, #666);
+    border: 2px solid var(--border-color, #ddd);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.secondaryButton:hover {
+    border-color: var(--text-primary, #1a1a1a);
+    color: var(--text-primary, #1a1a1a);
+    background: rgba(0, 0, 0, 0.02);
+}
+
+@media (min-width: 768px) {
+    .actions {
+        flex-direction: row;
+    }
+}

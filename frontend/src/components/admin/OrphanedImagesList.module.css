@@ -1,0 +1,140 @@
+.container {
+    width: 100%;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-4);
+    background: var(--color-bg-secondary);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-4);
+}
+
+.selectAll {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    cursor: pointer;
+}
+
+.checkbox {
+    cursor: pointer;
+}
+
+.bulkConfirm {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.confirmMessage {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-4);
+}
+
+.card {
+    border: 2px solid var(--color-bg-tertiary);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--color-bg-secondary);
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+    position: relative;
+    aspect-ratio: 1;
+    background: var(--color-bg-primary);
+    overflow: hidden;
+}
+
+.cardCheckbox {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 10;
+    accent-color: var(--color-primary);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    padding: var(--spacing-3);
+}
+
+.filename {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0 0 var(--spacing-1) 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.meta {
+    display: flex;
+    gap: var(--spacing-2);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+}
+
+.deleteButton {
+    margin: 0 var(--spacing-3) var(--spacing-3) var(--spacing-3);
+    width: calc(100% - var(--spacing-6));
+}
+
+.confirmButtons {
+    display: flex;
+    gap: var(--spacing-2);
+    margin: 0 var(--spacing-3) var(--spacing-3) var(--spacing-3);
+}
+
+.confirmButtons button {
+    flex: 1;
+}
+
+.emptyState {
+    text-align: center;
+    padding: var(--spacing-8) var(--spacing-4);
+}
+
+.emptyIcon {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: var(--spacing-3);
+}
+
+.emptyState h3 {
+    font-size: var(--font-size-xl);
+    margin: 0 0 var(--spacing-2) 0;
+    color: var(--color-text-primary);
+}
+
+.emptyState p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    margin: 0;
+}

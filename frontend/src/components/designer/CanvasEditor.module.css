@@ -1,0 +1,53 @@
+/* CanvasEditor Styles */
+
+.editorContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-tertiary);
+    padding: var(--spacing-3);
+    min-height: 500px;
+}
+
+.canvasWrapper {
+    position: relative;
+    background: white;
+    border: 1px solid var(--color-border-light);
+    border-radius: 4px;
+    box-shadow: var(--shadow-md);
+}
+
+.canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.placeholder p {
+    font-family: var(--font-family);
+    font-size: var(--font-size-md);
+    color: var(--color-secondary);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: var(--spacing-3);
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .editorContainer {
+        padding: var(--spacing-2);
+    }
+}

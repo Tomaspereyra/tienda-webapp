@@ -1,0 +1,72 @@
+/* ColorPicker Styles */
+
+.pickerContainer {
+    width: 100%;
+}
+
+.colorGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.colorSwatch {
+    width: 100%;
+    aspect-ratio: 1;
+    border: 2px solid var(--color-border-light);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.colorSwatch:hover {
+    transform: scale(1.1);
+    border-color: var(--color-border);
+}
+
+.colorSwatch.selected {
+    border-color: var(--color-primary);
+    border-width: 3px;
+    transform: scale(1.05);
+}
+
+.checkmark {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-primary);
+    text-shadow: 0 0 3px white, 0 0 3px white;
+}
+
+.customColorSection {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--color-border-light);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.customLabel {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    flex-shrink: 0;
+}
+
+.customColorPicker {
+    width: 50px;
+    height: 35px;
+    border: 2px solid var(--color-border-light);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.customColorPicker:hover {
+    border-color: var(--color-border);
+    transform: scale(1.05);
+}

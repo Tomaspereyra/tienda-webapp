@@ -1,0 +1,66 @@
+/* WhatsApp Button Styles */
+
+.whatsappButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-1);
+    width: 100%;
+    padding: var(--spacing-2) var(--spacing-4);
+
+    /* WhatsApp Official Green */
+    background-color: #25D366;
+    color: white;
+
+    /* Typography */
+    font-family: var(--font-family-accent);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+
+    /* Border */
+    border: none;
+    border-radius: 4px;
+
+    /* Transitions */
+    transition: all var(--transition-base);
+
+    /* Cursor */
+    cursor: pointer;
+}
+
+.whatsappButton:hover {
+    background-color: #20BA5A;
+    /* Darker green */
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+.whatsappButton:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
+
+.icon {
+    flex-shrink: 0;
+    stroke-width: 2.5;
+}
+
+.text {
+    white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .whatsappButton {
+        font-size: var(--font-size-xs);
+        padding: calc(var(--spacing-2) - 2px) var(--spacing-3);
+    }
+
+    .icon {
+        width: 18px;
+        height: 18px;
+    }
+}

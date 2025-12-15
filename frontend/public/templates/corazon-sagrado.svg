@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect fill="#FFF5F5" width="800" height="1000"/>
+  <g transform="translate(400, 400)">
+    <path d="M 0,-80 Q 60,-80 80,-20 Q 80,60 20,80 Q -60,80 -80,20 Q -80,-60 -20,-80 Q 60,-80 0,-80 Z" fill="#D32F2F" stroke="#B71C1C" stroke-width="3"/>
+    <circle cx="0" cy="-100" r="15" fill="#FF6B6B"/>
+    <circle cx="-8" cy="-110" r="8" fill="#FF6B6B"/>
+    <circle cx="8" cy="-110" r="8" fill="#FF6B6B"/>
+    <text x="0" y="10" font-family="serif" font-size="36" fill="#fff" text-anchor="middle">✟</text>
+  </g>
+  <text x="400" y="650" font-family="serif" font-size="32" fill="#333" text-anchor="middle" font-weight="300">SAGRADO CORAZÓN</text>
+  <text x="400" y="700" font-family="serif" font-size="20" fill="#666" text-anchor="middle">Corazón de Jesús</text>
+</svg>

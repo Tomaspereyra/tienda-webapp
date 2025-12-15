@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect fill="#F8F9FA" width="800" height="1000"/>
+  <circle cx="400" cy="350" r="120" fill="#E3F2FD" stroke="#1976D2" stroke-width="3"/>
+  <text x="400" y="370" font-family="Arial" font-size="48" fill="#1976D2" text-anchor="middle">✟</text>
+  <text x="400" y="600" font-family="serif" font-size="32" fill="#333" text-anchor="middle" font-weight="300">VIRGEN MARÍA</text>
+  <text x="400" y="650" font-family="serif" font-size="20" fill="#666" text-anchor="middle">Diseño Moderno</text>
+  <path d="M 300 900 Q 400 850 500 900" stroke="#1976D2" stroke-width="2" fill="none"/>
+</svg>
