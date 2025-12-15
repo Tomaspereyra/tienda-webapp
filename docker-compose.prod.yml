@@ -1,0 +1,94 @@
+version: '3.8'
+
+services:
+  # Nginx Proxy Manager - Reverse Proxy with SSL
+  nginx-proxy-manager:
+    image: 'jc21/nginx-proxy-manager:latest'
+    container_name: tienda-proxy
+    restart: unless-stopped
+    ports:
+      - '80:80' # HTTP
+      - '443:443' # HTTPS
+      - '81:81' # Admin Web Interface
+    environment:
+      - DB_SQLITE_FILE=/data/database.sqlite
+    volumes:
+      - npm-data:/data
+      - npm-letsencrypt:/etc/letsencrypt
+    networks:
+      - tienda-network
+    healthcheck:
+      test: [ "CMD", "/bin/check-health" ]
+      interval: 10s
+      timeout: 3s
+
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: tienda-backend
+    restart: unless-stopped
+    expose:
+      - "3000" # Only accessible through proxy
+    environment:
+      - PORT=3000
+      - ENV=production
+      - BASE_URL=/api # Uploads will be /api/uploads/filename.jpg
+      - CORS_ORIGIN=${CORS_ORIGIN:-https://ec2-18-218-0-115.us-east-2.compute.amazonaws.com}
+      - JWT_SECRET=${JWT_SECRET} # MUST be set via environment variable
+      - JWT_EXPIRY_HOURS=24
+      - DATABASE_PATH=data/tienda.db
+      - UPLOAD_DIR=./uploads
+      - MAX_UPLOAD_SIZE_MB=10 # Increased for production
+
+    volumes:
+      - db-data:/app/data
+      - uploads:/app/uploads
+    networks:
+      - tienda-network
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Frontend (React + Nginx)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_BASE_URL= # Empty because routes already include /api prefix
+    container_name: tienda-frontend
+    restart: unless-stopped
+    expose:
+      - "80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - tienda-network
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+# Persistent volumes
+volumes:
+  db-data:
+    driver: local
+  uploads:
+    driver: local
+  npm-data:
+    driver: local
+  npm-letsencrypt:
+    driver: local
+
+# Network
+networks:
+  tienda-network:
+    driver: bridge
