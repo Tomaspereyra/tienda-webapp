@@ -27,7 +27,9 @@ export const productsService = {
      * Get all products
      */
     getAll: async (): Promise<{ products: Product[] }> => {
-        const response = await apiClient.get('/api/products');
+        const response = await apiClient.get('/api/products', {
+            params: { limit: 100 }  // Aumentar límite para obtener todos los productos
+        });
         const products = response.data.data.products.map(transformProduct);
         return { products };
     },
@@ -37,7 +39,9 @@ export const productsService = {
      */
     getFeatured: async (): Promise<{ products: Product[] }> => {
         // Backend doesn't have a featured endpoint yet, so filter client-side for now
-        const response = await apiClient.get('/api/products');
+        const response = await apiClient.get('/api/products', {
+            params: { limit: 100 }  // Aumentar límite para obtener todos los productos
+        });
         const allProducts = response.data.data.products.map(transformProduct);
         const featured = allProducts.filter((p: Product) => p.featured);
         return { products: featured };

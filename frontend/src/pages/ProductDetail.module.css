@@ -178,6 +178,10 @@
     line-height: var(--line-height-relaxed);
     color: var(--color-secondary);
     margin: 0;
+    white-space: pre-wrap;
+    /* Preserva saltos de línea y espacios */
+    word-wrap: break-word;
+    /* Rompe palabras largas si es necesario */
 }
 
 .attributes {

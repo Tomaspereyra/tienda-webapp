@@ -93,7 +93,7 @@ export const Footer: React.FC = () => {
 
                 <div className={styles.footerBottom}>
                     <p className={styles.copyright}>
-                        © 2024 Tienda Inmaculada. Todos los derechos reservados.
+                        © 2025 Tienda Inmaculada. Todos los derechos reservados.
                     </p>
                 </div>
             </div>

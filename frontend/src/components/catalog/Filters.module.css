@@ -146,13 +146,24 @@
 }
 
 @media (max-width: 768px) {
+    .filtersWrapper {
+        padding: 0 var(--spacing-2);
+        /* Reducir padding en móvil */
+        box-sizing: border-box;
+        /* Asegurar que padding esté incluido en width */
+    }
+
     .filtersRow {
         flex-direction: column;
         align-items: flex-start;
+        width: 100%;
+        /* Asegurar ancho completo */
     }
 
     .filterSection {
         width: 100%;
+        flex-wrap: wrap;
+        /* Permitir que botones wrappeen */
     }
 
     .divider {

@@ -3,7 +3,7 @@ export const CATEGORIES = ['Casual', 'Religioso', 'Deportivo'] as const;
 export type Category = typeof CATEGORIES[number];
 
 // Product genders
-export const GENDERS = ['Hombre', 'Mujer', 'Niño'] as const;
+export const GENDERS = ['Hombre', 'Mujer', 'Niño', 'Unisex'] as const;
 export type Gender = typeof GENDERS[number];
 
 // Product sizes

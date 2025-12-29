@@ -5,6 +5,7 @@ import { productsService } from '@services/products';
 import { AdminNavbar } from '@components/layout/AdminNavbar';
 import { ProductForm } from '@components/admin/ProductForm';
 import { showToast } from '@components/common/Toast';
+import { Gender } from '@utils/constants';
 import styles from '@components/admin/ProductForm.module.css';
 
 export const EditProduct: React.FC = () => {
@@ -38,7 +39,7 @@ export const EditProduct: React.FC = () => {
                     images: product.images,
                     sizes: product.sizes as ("S" | "M" | "L" | "XL" | "XXL")[] || [],
                     colors: product.colors || [],
-                    gender: (product.gender || 'Hombre') as "Hombre" | "Mujer" | "Niño",
+                    gender: (product.gender || 'Hombre') as Gender,
                     category: (product.category || 'Casual') as "Casual" | "Religioso" | "Deportivo",
                     oversize: product.oversize || false,
                     featured: product.featured || false,
