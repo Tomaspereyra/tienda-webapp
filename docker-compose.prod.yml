@@ -54,11 +54,7 @@ services:
 
   # Frontend (React + Nginx)
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-      args:
-        - VITE_API_BASE_URL= # Empty because routes already include /api prefix
+    image: tomasspe/tienda-frontend:v2
     container_name: tienda-frontend
     restart: unless-stopped
     expose:
