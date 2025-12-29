@@ -24,9 +24,7 @@ services:
 
   # Backend API
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
+    image: tomasspe/tienda-backend:v1
     container_name: tienda-backend
     restart: unless-stopped
     expose:
