@@ -20,6 +20,15 @@
     background: var(--color-bg-secondary);
     padding: var(--spacing-5);
     gap: var(--spacing-4);
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.slide:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .imageContainer {

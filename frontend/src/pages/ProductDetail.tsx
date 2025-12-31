@@ -179,7 +179,7 @@ export const ProductDetail: React.FC = () => {
                         <div className={styles.attribute}>
                             <span className={styles.attributeLabel}>Colores disponibles:</span>
                             <span className={styles.attributeValue}>
-                                {(product.colors?.length || 0)} {(product.colors?.length || 0) === 1 ? 'color' : 'colores'}
+                                {product.colors?.join(', ') || 'No especificado'}
                             </span>
                         </div>
 

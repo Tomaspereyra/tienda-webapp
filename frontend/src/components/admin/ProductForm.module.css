@@ -69,6 +69,7 @@
 
 .checkboxGroup {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--spacing-4);
     padding: var(--spacing-3) 0;
 }

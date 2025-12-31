@@ -212,6 +212,9 @@
     font-weight: var(--font-weight-regular);
     color: var(--color-primary);
     text-align: right;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 60%;
 }
 
 /* CTA Section */

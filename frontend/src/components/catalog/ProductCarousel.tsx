@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import { Product } from '../../types';
 import styles from './ProductCarousel.module.css';
 
@@ -46,7 +47,11 @@ export const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) =>
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
                 {products.map((product) => (
-                    <div key={product.id} className={styles.slide}>
+                    <Link
+                        key={product.id}
+                        to={`/product/${product.id}`}
+                        className={styles.slide}
+                    >
                         <div className={styles.imageContainer}>
                             <img
                                 src={product.images[0]}
@@ -84,7 +89,7 @@ export const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) =>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
 

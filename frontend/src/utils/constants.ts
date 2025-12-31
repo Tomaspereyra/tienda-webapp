@@ -7,7 +7,7 @@ export const GENDERS = ['Hombre', 'Mujer', 'Niño', 'Unisex'] as const;
 export type Gender = typeof GENDERS[number];
 
 // Product sizes
-export const SIZES = ['XS', 'S', 'M', 'L', 'XL', 'XXL'] as const;
+export const SIZES = ['4', '6', '8', '10', '12', '14', '16', 'XS', 'S', 'M', 'L', 'XL', 'XXL'] as const;
 export type Size = typeof SIZES[number];
 
 // API endpoints
